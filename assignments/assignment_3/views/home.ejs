@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" />
+    <title>ExpressJS App</title>
+</head>
+<body>
+    <header>
+        <a href="/form"><button>Add User</button></a>
+    </header>
+    <div class="container">
+        <% users.forEach(user => {%>
+
+
+            <div class="card">
+                <img src="<%= user.image %>" alt="profile" />
+                <h3><%= user.name %></h3>
+                <p><%= user.email %></p>
+            </div>
+        <%}) %>
+    </div>
+</body>
+</html>
