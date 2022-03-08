@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" />
+    <title>ExpressJS App</title>
+</head>
+<body>
+    <header>
+        <a href="/form"><button>Add User</button></a>
+    </header>
+
+    <div class="container">
+        <% users.forEach(user => {%>
+            <div class="card">
+                <% if (user.isPromoted) {%>
+
+                    <h3 class="promoted"><%= user.name %></h3>
+                    <p class="promoted"><%= user.email %></p>
+                    <!-- <form method="POST" action="/users/<%= user._id %>/isPromoted?_method=PUT">
+                        <button class="promote-btn" id="edit-<%= user.name %>" type="submit">Promote</button>
+                    </form> -->
+                    <form method="POST" action="/users/<%= user._id %>/demote?_method=PUT">
+                        <button class="promote-btn" id="edit-<%= user.name %>" type="submit">Demote</button>
+                    </form>
+                    <%} else if (user.isPromoted == null){ %>
+                        
+                        <h3 class="null-value"><%= user.name %></h3>
+                        <p class="null-value"><%= user.email %></p>
+                        <form method="POST" action="/users/<%= user._id %>/isPromoted?_method=PUT">
+                            <button class="null-value-btn" id="edit-<%= user.name %>" type="submit">Promote</button>
+                        </form>
+                        <%} else {%>
+                            <h3 class="demoted"><%= user.name %></h3>
+                            <p class="demoted"><%= user.email %></p>
+                            <form method="POST" action="/users/<%= user._id %>/isPromoted?_method=PUT">
+                                <button class="demote-btn" id="edit-<%= user.name %>" type="submit">Promote</button>
+                            </form>
+                
+                <%}%>
+                <form method="POST" action="/users/<%= user._id %>/delete?_method=DELETE">
+                    <button class="delete-btn" id="delete-<%= user.name %>">Delete</button>
+                </form> 
+            </div>
+        <%}) %>
+    </div>
+</body>
+</html>

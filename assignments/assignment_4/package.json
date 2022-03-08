@@ -1,0 +1,20 @@
+{
+  "name": "expressjs_app",
+  "version": "1.0.0",
+  "description": "with put and delete ",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "test": "jest"
+  },
+  "author": "Praveen Dhakade",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.2.4"
+  }
+}
