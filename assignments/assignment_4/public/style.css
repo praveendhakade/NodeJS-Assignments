@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+header {
+    background: royalblue;
+    height: 50px;
+}
+
+header a {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+}
+
+header a button {
+    border: none;
+    background: orange;
+    padding: 5px 15px;
+    color: #fff;
+}
+
+/* posts styling */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    background-color: aquamarine;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 30%;
+    height: auto;
+    padding: 10px;
+    text-align:  center;
+}
+
+.promoted {
+    color: green;
+}
+
+.demoted {
+    color: red;
+}
+
+.null-value {
+    color: yellow;
+}
+
+.promote-btn {
+    background: red;
+    text-align: white;
+}
+.demote-btn {
+    background: green;
+    text-align: white;
+}
+
+.null-value-btn {
+    background: green;
+    text-align: white;
+}
+
+form {
+    display: inline-block;
+    margin: 5px;
+}
+
+form button {
+    
+    border: none;
+    padding: 5px 10px;
+}
+
+.delete-btn{
+    background: orangered;
+    border: none;
+    padding: 5px 10px;
+}
